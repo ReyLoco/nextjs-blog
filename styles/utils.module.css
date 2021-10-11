@@ -58,3 +58,12 @@
   font-style: italic;
   color: darkblue;
 }
+
+.error{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.h1 {
+  margin-top: 1.5rem;
+}

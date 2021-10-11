@@ -1,22 +1,18 @@
-import * as Constants from 'constants';
 import Layout from "../components/Layout";
-import utilStyles from '../styles/utils.module.css';
-
-let cadenas = Constants;
+import { HOME, HOMEDESC, HOMETEXT, HOMETIT } from "../constants";
+import utilStyles from "../styles/utils.module.css";
 
 export default function Home() {
   return (
-    <Layout title={cadenas.HOME} description={cadenas.HOMEDESC} home>
-      
+    <Layout title={HOME} description={HOMEDESC} home>
       <section className={utilStyles.headingMd}>
-        <p>{cadenas.HOMETIT}</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
+        <h1 className={utilStyles.h1}>{HOMETIT}</h1>
+        <div>
+          {HOMETEXT.map((p, i) => {
+            return <p key={i}>{p}</p>;
+          })}
+        </div>
       </section>
     </Layout>
-
-
-  )
+  );
 }
