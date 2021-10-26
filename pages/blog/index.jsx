@@ -49,6 +49,8 @@ export async function getServerSideProps() {
 
     const res = await Articulo.find({});
 
+    console.log(res)
+
     const articulos = res.map((doc) => {
       const articulo = doc.toObject();
       articulo._id = `${articulo._id}`;
